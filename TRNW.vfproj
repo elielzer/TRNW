@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectCreator="Intel Fortran" Keyword="Win32 Application" Version="11.0" ProjectIdGuid="{C7EB726D-1B8F-2AB8-FA40-963A6292CF00}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" UseCompiler="ifortCompiler">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL" UseWindowsLibs="true"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" HeaderFileName="$(InputName).h"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" UseCompiler="ifxCompiler">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL" UseWindowsLibs="true"/>
+			<Tool Name="VFLinkerTool" LinkIncremental="linkIncrementalNo" SuppressStartupBanner="true" GenerateDebugInformation="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64" HeaderFileName="$(InputName).h"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" UseCompiler="ifortCompiler">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL" UseWindowsLibs="true"/>
+			<Tool Name="VFLinkerTool" SuppressStartupBanner="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" HeaderFileName="$(InputName).h"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+		<Configuration Name="Release|x64" UseCompiler="ifxCompiler">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL" UseWindowsLibs="true"/>
+			<Tool Name="VFLinkerTool" SuppressStartupBanner="true" SubSystem="subSystemWindows" AdditionalDependencies="advapi32.lib ws2_32.lib"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64" HeaderFileName="$(InputName).h"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+			<Tool Name="VFManifestTool" SuppressStartupBanner="true"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd">
+			<File RelativePath=".\TRNW.fi"/>
+		</Filter>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe">
+			<File RelativePath=".\Source1.f90"/>
+			<File RelativePath=".\TRNW.ico"/>
+			<File RelativePath=".\TRNW.rc">
+			</File>
+		</Filter>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+			<File RelativePath=".\TRNW.f90"/>
+			<File RelativePath=".\TRNWglobals.f90"/>
+		</Filter>
+		<File RelativePath=".\ReadMe.txt"/>
+		<File RelativePath=".\Resource.h">
+			<FileConfiguration Name="Debug|Win32">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/>
+			</FileConfiguration>
+			<FileConfiguration Name="Release|x64">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/>
+			</FileConfiguration>
+			<FileConfiguration Name="Debug|x64">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/>
+			</FileConfiguration>
+			<FileConfiguration Name="Release|Win32">
+				<Tool Name="VFCustomBuildTool" CommandLine="deftofd &quot;$(InputPath)&quot; &quot;$(InputDir)$(InputName).fd&quot;" Description="Generating Fortran include file..." Outputs="$(InputDir)$(InputName).fd"/>
+			</FileConfiguration>
+		</File>
+	</Files>
+	<Globals/>
+</VisualStudioProject>

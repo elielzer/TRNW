@@ -1,0 +1,217 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+#include "winver.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutro resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTDLG DIALOG 22, 17, 167, 64
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About TRNW"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,132,2,32,14
+    ICON            "TRNW",-1,2,3,1,1
+    LTEXT           "CompanyName",IDC_VER1,30,2,100,8
+    LTEXT           "FileDescription",IDC_VER2,30,10,82,8
+    LTEXT           "ProductVersion",IDC_VER3,114,10,16,8
+    LTEXT           "LegalCopyright (c)",IDC_VER4,30,18,137,8
+    LTEXT           "LegalTrademarks",IDC_VER5,30,34,136,27
+    CONTROL         "",501,"Static",SS_BLACKRECT,28,31,138,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    "ABOUTDLG", DIALOG
+    BEGIN
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // Neutro resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Inglês (Estados Unidos) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+TRNW                    ICON                    "TRNW.ico"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+TRNW MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",                        IDM_NEW
+        MENUITEM "&Open...",                    IDM_OPEN, GRAYED
+        MENUITEM "&Save",                       IDM_SAVE, GRAYED
+        MENUITEM "Save &As...",                 IDM_SAVEAS, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...",                   IDM_PRINT, GRAYED
+        MENUITEM "P&rint Setup...",             IDM_PRINTSETUP, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               IDM_UNDO, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                IDM_CUT, GRAYED
+        MENUITEM "&Copy\tCtrl+C",               IDM_COPY, GRAYED
+        MENUITEM "&Paste\tCtrl+V",              IDM_PASTE, GRAYED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Contents",                   IDM_HELPCONTENTS
+        MENUITEM "&Search for Help On...",      IDM_HELPSEARCH
+        MENUITEM "&How to Use Help",            IDM_HELPHELP
+        MENUITEM SEPARATOR
+        MENUITEM "&About TRNW...",              IDM_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+TRNW ACCELERATORS
+BEGIN
+    VK_F1,          IDM_HELPCONTENTS,       VIRTKEY 
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,0
+ PRODUCTVERSION 1,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", "My Company"
+            VALUE "FileDescription", "TRNW Application"
+            VALUE "FileVersion", "1.0"
+            VALUE "InternalName", "TRNW"
+            VALUE "ProductName", "TRNW"
+            VALUE "ProductVersion", "1.0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "#include ""winver.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    0                       " "
+END
+
+#endif    // Inglês (Estados Unidos) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
