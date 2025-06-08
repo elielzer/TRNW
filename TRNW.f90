@@ -54,16 +54,18 @@ function WinMain( hInstance, hPrevInstance, lpszCmdLine, nCmdShow )
     character(SIZEOFAPPNAME) lpszMenuName
     character(SIZEOFAPPNAME) lpszAccelName
 
-    integer N, I, J, K, M, I2, COMPUT
-    integer, dimension(100) :: LISTA
-    integer, dimension(200,3) :: LISTS
-
-    integer, dimension(200,2) :: LISTP 
+    !*******************************************
+    ! CRIA UMA LISTA DE NUMEROS INTEIROS QUE   !
+    ! FORMAM UM TRIÂNGULO RETÂNGULO INTEIRO    ! 
+    !*******************************************
+    INTEGER N, I, J, K, M, I2, COMPUT
+    INTEGER, DIMENSION(100) :: LISTA
+    INTEGER, DIMENSION(200,3) :: LISTS
+    INTEGER, DIMENSION(200,2) :: LISTP 
     
     N = 100
     M = 2*N
-    
-    ghInstance = hInstance
+        ghInstance = hInstance
     ghModule = GetModuleHandle(NULL)
     ghwndMain = NULL
 
@@ -110,51 +112,44 @@ function WinMain( hInstance, hPrevInstance, lpszCmdLine, nCmdShow )
                                  NULL                              &
                               )
     if (ghwndMain == 0) goto 99999
-    
-    !*******************************************
-    ! CRIA UMA LISTA COM NUMERO QUE FORMAM UM     
-    ! TRIÂNGULO RETÂNGULO INTEIRO
-    !*******************************************
-    
     FORALL (I = 1:M)
         LISTP(I,1) = I
         LISTP(I,2) = I**2
-    end forall
+    END FORALL
     
     FORALL (I = 1:N)
         LISTA(I) = I
-    end forall
+    END FORALL
     
     I = 1
     I2 = 0
-    do while (I .le. N)
+    DO WHILE (I .le. N)
         J = 1
-        do while (J .le. N)
-            if (LISTA(I) .NE. LISTA(J)) then
+        DO WHILE (J .le. N)
+            if (LISTA(I) .NE. LISTA(J)) THEN
             COMPUT = LISTA(I)**2 + LISTA(J)**2
             K = 1
-            do while (K .le. M)
-                if (COMPUT.EQ. LISTP(K,2)) then
+            DO WHILE (K .le. M)
+                if (COMPUT.EQ. LISTP(K,2)) THEN
                 I2 = I2 +1
                 LISTS(I2,1) = LISTA(I)               
                 LISTS(I2,2) = LISTA(J)
                 LISTS(I2,3) = LISTP(K,1)
                
-                goto 10
-                end if
+                GOTO 10
+                END if
                 K = K + 1
-            end DO
-            end if
+            END DO
+            END if
 
-            !
 10        J = J + 1
-        end do
-    
+        END DO
         I = I + 1
-    end do 
+    END DO 
     
-    open(1,FILE='test.dat')
-    write (1, '(I3,I3,I5)') (LISTS(n,1), LISTS(n,2), LISTS(n,3), n = 1, 100)
+    OPEN(1,FILE='test.dat')
+    WRITE (1, '(I3,I3,I5)') &
+    (LISTS(n,1), LISTS(n,2), LISTS(n,3), n = 1, 100)
 
     
 
